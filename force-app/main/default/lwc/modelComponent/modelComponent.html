@@ -1,0 +1,30 @@
+<template>
+    <lightning-modal-header label="Create Related Contact"></lightning-modal-header>
+    <lightning-record-edit-form object-api-name="Contact" >
+        <lightning-modal-body>
+            <lightning-messages></lightning-messages>
+            <lightning-input-field field-name="FirstName" onchange={handleFirstName} value={FirstName} required> </lightning-input-field>
+            <lightning-input-field field-name="LastName" onchange={handleLastName} value={LastName}> </lightning-input-field>
+            <lightning-input-field field-name="Email" onchange={handleEmail}  required> </lightning-input-field>
+            <lightning-input-field field-name="Phone" onchange={handlePhone} required> </lightning-input-field>
+        </lightning-modal-body>
+
+  <lightning-modal-footer>
+<lightning-button label="Cancel" onclick={handleClose} class="slds-m-left_x-small"></lightning-button>
+<lightning-button  variant="brand" type="submit" name="save" label="Save" class="slds-m-left_x-small" onclick={handleCreateContact1}></lightning-button>
+</lightning-modal-footer>
+ </lightning-record-edit-form>
+ <!-- <lightning-modal-body>
+    <lightning-messages></lightning-messages>
+      {accId}
+    <lightning-input-field label="First Name" field-name="FirstName"> ASD</lightning-input-field>
+    <lightning-input-field field-name="LastName"> </lightning-input-field>
+    <lightning-input-field field-name="Email"> </lightning-input-field>
+    <lightning-input-field field-name="Phone"> </lightning-input-field>
+</lightning-modal-body>
+<lightning-modal-footer>
+    <lightning-button label="Cancel" onclick={handleClose} class="slds-m-left_x-small"></lightning-button>
+    <lightning-button  variant="brand" type="submit" name="create" label="Create" class="slds-m-left_x-small" onclick={handleCreateContact}></lightning-button>
+    </lightning-modal-footer> -->
+  
+</template>
